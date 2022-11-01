@@ -54,6 +54,9 @@ default[:mongodb][:init_dir] = "/etc/init.d"
 default[:mongodb][:init_script_template] = "mongodb.init.erb"
 default[:mongodb][:reload_action] = "restart" # or "none"
 
+# Seconds spent waiting for a graceful stop before the service is forcefully terminated
+default[:mongodb][:init_graceful_stop_timeout_secs] = 300
+
 default[:mongodb][:default_service] = "mongod"
 
 case node['platform_family']
