@@ -122,7 +122,7 @@ start_server() {
 stop_server() {
 # Stop the process using the wrapper
             start-stop-daemon --stop --quiet --pidfile $PIDFILE \
-                        --retry 300 \
+                        --retry <%= node[:mongodb][:init_graceful_stop_timeout_secs] %> \
                         --user $DAEMONUSER \
                         --exec $DAEMON
             errcode=$?
