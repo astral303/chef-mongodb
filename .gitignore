@@ -1,3 +1,7 @@
 build
 .kitchen/
 .kitchen.local.yml
+
+# IntelliJ
+.idea/
+*.iml
