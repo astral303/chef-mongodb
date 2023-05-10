@@ -40,7 +40,7 @@ restart () {
   start
 }
 
-<% if %w{ rhel }.include? node['platform_family'] -%>
+<% if %w{ rhel amazon }.include? node['platform_family'] -%>
 ulimit -f <%= node['mongodb']['ulimit']['file_size'] %>
 ulimit -t <%= node['mongodb']['ulimit']['cpu_time'] %>
 ulimit -v <%= node['mongodb']['ulimit']['virtual_memory'] %>

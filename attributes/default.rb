@@ -63,7 +63,7 @@ when "freebsd"
   default[:mongodb][:root_group] = "wheel"
   default[:mongodb][:package_name] = "mongodb"
 
-when "rhel","fedora"
+when "rhel","fedora","amazon"
   default[:mongodb][:defaults_dir] = "/etc/sysconfig"
   default[:mongodb][:package_name] = "mongo-10gen-server"
   default[:mongodb][:user] = "mongod"
